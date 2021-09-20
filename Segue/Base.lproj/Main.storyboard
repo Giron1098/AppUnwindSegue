@@ -32,7 +32,8 @@
                                     <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Odp-xb-Blp" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Sj8-rJ-Z25"/>
+                                    <action selector="BTN_Go_To_B:" destination="BYZ-38-t0r" eventType="touchUpInside" id="krr-50-XYm"/>
+                                    <segue destination="Odp-xb-Blp" kind="presentation" identifier="Segue_A_to_B" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Sj8-rJ-Z25"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +68,8 @@
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NrZ-pc-Gr5" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="cEa-ab-zux"/>
+                                    <action selector="BTN_B_to_C:" destination="Odp-xb-Blp" eventType="touchUpInside" id="KBi-tg-qLK"/>
+                                    <segue destination="NrZ-pc-Gr5" kind="presentation" identifier="Segue_B_to_C" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="cEa-ab-zux"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="STo-mW-zYf">
@@ -112,6 +114,9 @@
                                 <state key="normal" title="Go back to A">
                                     <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="BTN_Go_back_to_A:" destination="NrZ-pc-Gr5" eventType="touchUpInside" id="O5I-i7-f5j"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anO-Ab-qrJ">
                                 <rect key="frame" x="20" y="44" width="80" height="30"/>
@@ -129,8 +134,12 @@
                         <viewLayoutGuide key="safeArea" id="PnU-JZ-Zjb"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
+                    <connections>
+                        <segue destination="A1H-Nl-cz7" kind="unwind" identifier="unwind_to_A" unwindAction="unwindWith_seg:" id="JZK-5l-t3D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adA-2t-6bF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="A1H-Nl-cz7" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1254" y="112"/>
         </scene>

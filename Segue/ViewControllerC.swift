@@ -21,14 +21,11 @@ class ViewControllerC: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func BTN_Go_back_to_A(_ sender: UIButton) {
+        
+        performSegue(withIdentifier: "unwind_to_A", sender: self)
+        
     }
-    */
+    
 
 }
